@@ -4,7 +4,7 @@ function main(cvs: HTMLCanvasElement) {
         color: { r: 1, g: 1, b: 1 },
         intensity: 2
     }
-    let scene = new Scene(800, 600, Math.PI / 2, light)
+    let scene = new Scene(cvs.width, cvs.height, Math.PI / 2, light)
 
     let origin = new Vector3(0, -1, 0)
     let vector = new Vector3(0, 1, 0)
