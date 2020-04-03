@@ -56,24 +56,6 @@ class Scene {
         return new Ray(origin, new Vector3(senX, senY, -1))
     }
 
-    /**
-     * Returns index of intersecting object
-     * @param ray ray to intersect
-     */
-    intersect(ray: Ray): number | null {
-        let min = Infinity
-        let minIdx = null
-        for (let i = 0; i < this.objects.length; i++) {
-            let obj = this.objects[i]
-            let int = obj.intersect(ray)
-            if (int !== null && int < min) {
-                min = int
-                minIdx = i
-            }
-        }
-        return minIdx
-    }
-
     render(cvs: HTMLCanvasElement) {
         cvs.width = this.width
         cvs.height = this.height
